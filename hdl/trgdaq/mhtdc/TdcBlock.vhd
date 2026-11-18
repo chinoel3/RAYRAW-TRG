@@ -378,7 +378,7 @@ begin
     rb_in(kWidthRingData*i +kIndexHit downto kWidthRingData*i)  <=  (hit_found(i) AND (NOT reg_local.hit_mask(i))) & decoded_fcount(i);
   end generate;
 
-  hitFoundOut <= hit_found;
+  hitFoundOut <= hit_found AND (NOT reg_local.hit_mask);
 
   -- instance of ring buffer --
   u_RingBuffer : ringbuffer_bram_v1

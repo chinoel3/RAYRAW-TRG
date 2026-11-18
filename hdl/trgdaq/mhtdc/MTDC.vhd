@@ -325,9 +325,9 @@ begin
                 reg_tdc.tdc.hit_mask(7 downto 0) <= dataLocalBusIn;
               elsif(addrLocalBus(kMultiByte'range) = k2ndbyte) then
                 reg_tdc.tdc.hit_mask(15 downto 8) <= dataLocalBusIn;
-              elsif(addrLocalBus(kMultiByte'range) <= k3rdbyte) then
+              elsif(addrLocalBus(kMultiByte'range) = k3rdbyte) then
                 reg_tdc.tdc.hit_mask(23 downto 16) <= dataLocalBusIn;
-              elsif(addrLocalBus(kMultiByte'range) <= k4thbyte) then
+              elsif(addrLocalBus(kMultiByte'range) = k4thbyte) then
                 reg_tdc.tdc.hit_mask(31 downto 24) <= dataLocalBusIn;
               else
               end if;
